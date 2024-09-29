@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Load the CSV file
-df = pd.read_csv('psd_results_2Hz.csv')
+df = pd.read_csv("C:/Users/windows/Desktop/EEG-GPT-main/psd_results_2Hz.csv")
 
 # Function to calculate Fisher Ratios
 def calculate_fisher_ratios(df):
@@ -54,7 +54,7 @@ def calculate_fisher_ratios(df):
 fisher_df = calculate_fisher_ratios(df)
 
 # Save the Fisher Ratios result to a CSV file
-fisher_df.to_csv('fisher_ratios.csv', index=False)
+fisher_df.to_csv('C:/Users/windows/Desktop/EEG-GPT-main/fisher_ratios.csv', index=False)
 print("Fisher ratios saved to 'fisher_ratios.csv'")
 
 # Function to plot Fisher Ratio heatmaps
