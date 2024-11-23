@@ -4,7 +4,7 @@
   <li>LLM performs its own classification operations based on EEG data.</li>
   <li>We trained gpt-4o model utilizing fine-tuning for better performance.</li>
 </ul>
-<img width="927" alt="figure1" src="https://github.com/user-attachments/assets/9803f163-de78-4ad8-9341-41bc65a46a91">
+<img width="927" alt="figure1" src="https://github.com/user-attachments/assets/18f66f60-1b33-45af-9929-befd06ef0d55">
 
 <br>
 <h2>Requirements</h2>
