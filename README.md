@@ -1,5 +1,5 @@
 <h2>Fine-tuned LLM for Electroencephalography(EEG) data classification</h2>
-<p>This is LLM Fine tuning model that classifies four movements (left arm, right arm, tongue, foot) from EEG.</p>
+<p>This is LLM Fine tuning model that classifies four movements (left hand, right hand, tongue, foot) from EEG.</p>
 <ul>
   <li>LLM performs its own classification operations based on EEG data.</li>
   <li>We trained gpt-4o model utilizing fine-tuning for better performance.</li>
@@ -23,6 +23,7 @@
 
 <br>
 <h2>Features</h2>
+<p>1) <strong>Power spectral density (PSD)</strong> is computed in 2Hz steps from 4Hz to 36Hz.</p>
 <p>For feature selection, <strong>Fisher Ratio</strong> is utilized.</p>
 <table style="border-collapse: collapse; width: 100%; data-ke-align="alignLeft">
   <tbody>
@@ -34,6 +35,7 @@
         </tr>
   </tbody>
 </table>
+<p>2) <strong>Common spatial pattern (CSP)</strong> is used to extract spatial features that maximize discriminability between classes.</p>
 
 <br>
 <h2>Evaluation</h2>
@@ -44,5 +46,3 @@
   <li><strong>F1 score</strong></li>
   <li><strong>ROC-AUC</strong></li>
 </ul>
-<p>(Metrics plot will be here)</p>
-</p>
