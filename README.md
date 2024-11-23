@@ -23,14 +23,14 @@
 
 <br>
 <h2>Features</h2>
-<p>For feature selection and extraction, <strong>Fisher Ratio</strong> is utilized.</p>
+<p>For feature selection, <strong>Fisher Ratio</strong> is utilized.</p>
 <table style="border-collapse: collapse; width: 100%; data-ke-align="alignLeft">
   <tbody>
         <tr>
-            <td style="width: 50%;"><img width="500" alt="fr_label1" src="https://github.com/user-attachments/assets/657684c1-7cf2-41eb-a10f-e4d1f0ca2159"></td>
-            <td style="width: 50%;"><img width="500" alt="fr_label2" src="https://github.com/user-attachments/assets/baf30b29-2513-4078-a01d-ab3bf524ef17"></td>
-            <td style="width: 50%;"><img width="500" alt="fr_label3" src="https://github.com/user-attachments/assets/f63b1310-513e-4335-b64e-6c1014964eb9"></td>
-            <td style="width: 50%;"><img width="500" alt="fr_label4" src="https://github.com/user-attachments/assets/ac46f692-9e85-4d32-bffc-7f73ac26b44e"></td>
+            <td style="width: 50%;"><img width="500" alt="fr_label1" src="https://github.com/user-attachments/assets/619a317b-f0d0-4600-9fe7-14da35aec61a"></td>
+            <td style="width: 50%;"><img width="500" alt="fr_label2" src="https://github.com/user-attachments/assets/ccb4fc57-7db1-4902-b231-6400043e33ef"></td>
+            <td style="width: 50%;"><img width="500" alt="fr_label3" src="https://github.com/user-attachments/assets/9bc6ef09-93ac-4f9a-82c7-c173cacb798e"></td>
+            <td style="width: 50%;"><img width="500" alt="fr_label4" src="https://github.com/user-attachments/assets/528634b7-558e-4704-97b2-38dd7b427eea"></td>
         </tr>
   </tbody>
 </table>
