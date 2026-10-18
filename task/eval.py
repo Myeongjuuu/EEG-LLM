@@ -1,8 +1,8 @@
 import os
 import openai
 from openai import OpenAI
-from Preprocessing.feature_extraction import load_eeg_data
-from Preprocessing.csv_to_json_4o import csv_to_json_without_label
+from preprocessing.feature_extraction import load_eeg_data
+from preprocessing.csv_to_json_4o import csv_to_json_without_label
 from sklearn.metrics import roc_auc_score, f1_score, accuracy_score
 
 

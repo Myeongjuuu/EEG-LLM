@@ -12,8 +12,8 @@ import os
 from openai import OpenAI
 import openai
 import json
-from Preprocessing.feature_extraction import load_eeg_data
-from Preprocessing.csv_to_json_4o import csv_to_json_without_label
+from preprocessing.feature_extraction import load_eeg_data
+from preprocessing.csv_to_json_4o import csv_to_json_without_label
 from sklearn.metrics import cohen_kappa_score, f1_score, accuracy_score
 
 

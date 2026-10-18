@@ -1,10 +1,8 @@
 .DS_Store
 .idea
-/__pycache__
-Preprocessing/__pycache__
-Task/__pycache__
-*.pyc
+__pycache__/
+*.py[cod]
 Dataset
-Task/id_list.txt
-Utils/concat_subj.ipynb
-Utils/data4ml_withcsp.ipynb
+task/id_list.txt
+utils/concat_subj.ipynb
+utils/data4ml_withcsp.ipynb

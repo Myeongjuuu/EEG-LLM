@@ -5,7 +5,7 @@ Base functions for converting csv to json, json to jsonl.
 import pandas as pd
 import numpy as np
 import json
-from Preprocessing.feature_extraction import extract_features
+from preprocessing.feature_extraction import extract_features
 
 
 def csv_to_json(df, csp, window_size, selected_columns, labels):

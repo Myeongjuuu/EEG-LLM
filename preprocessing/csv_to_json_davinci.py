@@ -5,7 +5,7 @@ csv를 json으로, json을 jsonl로 변환하기 위한 베이스 함수.
 import pandas as pd
 import numpy as np
 import json
-from Preprocessing.feature_extraction import extract_features
+from preprocessing.feature_extraction import extract_features
 
 
 def csv_to_json(df, window_size, selected_columns, labels):
