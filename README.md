@@ -21,6 +21,16 @@
 <br>
 <p><strong>Download</strong> : BBCI Competition III (https://www.bbci.de/competition/iii/download/index.html?agree=yes&submit=Submit)</p>
 
+<h3>Prepare subject 1 data locally</h3>
+<p>After downloading the subject 1 GDF file (<code>k3b.gdf</code>) and the released true-label file (<code>true_label_k3.txt</code>) into <code>Dataset/raw/</code>, activate the Conda environment and run:</p>
+<pre>conda activate eeg-llm
+python -m Preprocessing.gdf_to_csv</pre>
+<p>The converter writes train, validation, and test CSV/CSP files plus JSONL prompts under <code>Dataset/processed/k3b/label45/</code>. It reproduces the existing binary setup (class 4 vs. classes 1-3 grouped as 5), uses 4-second cue-to-imagery windows, and keeps the released test labels out of the test prompts. The test labels remain in the CSV for local scoring.</p>
+
+<p>To run the classical baselines first, run:</p>
+<pre>python -m Task.ML.run_baselines</pre>
+<p>This tunes SVM, Random Forest, and MLP with stratified 5-fold cross-validation on the training split, using the parameter grids and accuracy objective from the original ML notebooks. It reports validation and official test metrics, and saves results and fitted models under <code>Dataset/processed/k3b/label45/baselines/</code>. It uses five training-selected PSD features plus two CSP features. The official test split is only used for final reporting.</p>
+
 <br>
 <h2>Features</h2>
 <p>1) <strong>Power spectral density (PSD)</strong> is computed in 2Hz steps from 4Hz to 36Hz.</p>

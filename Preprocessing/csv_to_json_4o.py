@@ -20,7 +20,7 @@ def csv_to_json(df, csp, window_size, selected_columns, labels):
     json_array = []
 
     # EEG 채널 이름을 selected_columns에 매핑합니다.
-    channel_names = ['FCz', 'C3', 'Cz', 'C4', 'CP3']  # 각각 0, 1, 2, 3에 대응
+    channel_names = list(df.columns)
 
     for start in range(0, len(df) - window_size + 1, window_size):
         window_data = df.iloc[start:start + window_size, :]  # 전체 데이터를 가져옴
@@ -91,7 +91,7 @@ def csv_to_json_without_label(df, csp, window_size, selected_columns):
     json_array = []
 
     # EEG 채널 이름을 selected_columns에 매핑합니다.
-    channel_names = ['FCz', 'C3', 'Cz', 'C4', 'CP3']  # 각각 0, 1, 2, 3에 대응
+    channel_names = list(df.columns)
 
     for start in range(0, len(df) - window_size + 1, window_size):
         window_data = df.iloc[start:start + window_size, :]  # 전체 데이터를 가져옴
