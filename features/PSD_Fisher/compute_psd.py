@@ -1,7 +1,10 @@
 import mne
 import numpy as np
 import pandas as pd
-from data_split_chunk import preprocess_data, split_data_into_chunks, ch_names, ch_types, sampling_freq
+try:
+    from .data_split_chunk import preprocess_data, split_data_into_chunks, ch_names, ch_types, sampling_freq
+except ImportError:  # Support running this file directly from its directory.
+    from data_split_chunk import preprocess_data, split_data_into_chunks, ch_names, ch_types, sampling_freq
 
 def calculate_psd_for_labels(eeg_raw_split, ch_names, ch_types, sampling_freq, fmin=4, fmax=36, output_csv='C:/Users/windows/Desktop/EEG-GPT-main/psd_results_2Hz.csv'):
     """

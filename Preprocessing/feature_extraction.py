@@ -37,12 +37,17 @@ def compute_band_power(raw, band):
 
 def extract_features(data, selected_columns, sfreq=250):
     """
-    Extract features from EEG data. Furthermore, the data is downsampled to the target sampling frequency.
-    :param data: EEG data (DataFrame)
-    :param selected_columns: List of tuples containing channel index and frequency bands
-    :param sfreq: Sampling frequency of the data
-    :param target_sfreq: Target sampling frequency
-    :return: Extracted features (DataFrame)
+    Compute Welch PSD band-power features for selected EEG channels.
+
+    This function assumes the input has already been preprocessed. It does not
+    filter or resample the signal. Each requested channel/band pair becomes one
+    column in a one-row DataFrame; the feature value is the sum of PSD bins in
+    that band.
+
+    :param data: EEG samples in a DataFrame, with channels in columns
+    :param selected_columns: Pairs of channel indices and frequency bands
+    :param sfreq: Sampling frequency of the input data in Hz
+    :return: One-row DataFrame containing the selected band-power features
     """
     feature_dict = {}  # 결과를 저장할 딕셔너리
 

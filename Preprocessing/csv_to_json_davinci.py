@@ -5,7 +5,7 @@ csv를 json으로, json을 jsonl로 변환하기 위한 베이스 함수.
 import pandas as pd
 import numpy as np
 import json
-import Preprocessing.feature_extraction
+from Preprocessing.feature_extraction import extract_features
 
 
 def csv_to_json(df, window_size, selected_columns, labels):
@@ -27,7 +27,7 @@ def csv_to_json(df, window_size, selected_columns, labels):
         window_data = df.iloc[start:start + window_size, selected_columns]  # Generate window based on selected columns
         label = labels[start]  # Assuming labels are provided for each window
 
-        features = feature_extraction.extract_features(window_data, list(range(len(selected_columns))))
+        features = extract_features(window_data, list(range(len(selected_columns))))
         features_dict = features.to_dict('index')  # Convert DataFrame to dictionary
 
         # Generate features_dict_with_keys
@@ -63,7 +63,7 @@ def csv_to_json_without_label(df, window_size, selected_columns):
     for start in range(0, len(df) - window_size + 1, window_size):
         window_data = df.iloc[start:start + window_size, selected_columns]  # Generate window based on selected columns
 
-        features = Preprocessing.feature_extraction.extract_features(window_data, list(range(len(selected_columns))))
+        features = extract_features(window_data, list(range(len(selected_columns))))
         features_dict = features.to_dict('index')  # Convert DataFrame to dictionary
 
         # Generate features_dict_with_keys

@@ -1,10 +1,6 @@
 import pandas as pd
-import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
-
-# Load the CSV file
-df = pd.read_csv("C:/Users/windows/Desktop/EEG-GPT-main/psd_results_2Hz.csv")
 
 # Function to calculate Fisher Ratios
 def calculate_fisher_ratios(df):
@@ -50,15 +46,10 @@ def calculate_fisher_ratios(df):
     
     return fisher_df
 
-# Calculate Fisher Ratios
-fisher_df = calculate_fisher_ratios(df)
-
-# Save the Fisher Ratios result to a CSV file
-fisher_df.to_csv('C:/Users/windows/Desktop/EEG-GPT-main/fisher_ratios.csv', index=False)
-print("Fisher ratios saved to 'fisher_ratios.csv'")
-
 # Function to plot Fisher Ratio heatmaps
 def plot_fisher_ratios(fisher_df):
+    import seaborn as sns
+
     labels = fisher_df['Label'].unique()
     
     # Define the desired frequency band order
@@ -80,6 +71,16 @@ def plot_fisher_ratios(fisher_df):
         plt.ylabel('Channel')
         plt.show()
 
-# Plot Fisher Ratio heatmaps
-plot_fisher_ratios(fisher_df)
+def main():
+    """Calculate and plot Fisher ratios for the legacy PSD result file."""
+    input_path = "C:/Users/windows/Desktop/EEG-GPT-main/psd_results_2Hz.csv"
+    output_path = "C:/Users/windows/Desktop/EEG-GPT-main/fisher_ratios.csv"
+    fisher_df = calculate_fisher_ratios(pd.read_csv(input_path))
+    fisher_df.to_csv(output_path, index=False)
+    print(f"Fisher ratios saved to '{output_path}'")
+    plot_fisher_ratios(fisher_df)
+
+
+if __name__ == "__main__":
+    main()
 
